@@ -2,7 +2,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import Link from 'next/link';
 import Navbar from './Navbar';
-import styles from './blog_post_page.module.css';
+import styles from './BlogPostPage.module.css';
 export default function BlogPostPage({ config, post, searchBarComponent, footerComponent, bannerComponent, className = '', }) {
     const basePath = config.basePath || '/hub';
     // Format date
