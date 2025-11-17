@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './categories_section.module.css';
+import styles from './CategoriesSection.module.css';
 
 interface CategoriesSectionProps {
   categories: string[];
