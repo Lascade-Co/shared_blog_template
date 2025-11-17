@@ -81,6 +81,7 @@ export interface HeroContainerProps {
     ChristmasBannerComponent?: React.ComponentType<{
         isVisible: boolean;
         onClose: () => void;
+        className?: string;
         [key: string]: any;
     }>;
     title1: string;
