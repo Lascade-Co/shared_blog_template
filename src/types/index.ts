@@ -110,7 +110,8 @@ export interface HeroContainerProps {
 
     // Content
     title1: string;
-    title2?: string;
+    title2: string;
+    title3?: string;
 
     // Search state
     searchQuery?: string;

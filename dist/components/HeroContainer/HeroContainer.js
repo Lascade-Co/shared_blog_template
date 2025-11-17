@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import styles from './HeroContainer.module.css';
-export default function HeroContainer({ NavbarComponent, ChristmasBannerComponent, title1, title2, searchQuery = '', containerClassName = '', headingContainerClassName = '', title1ClassName = '', title2ClassName = '', showChristmasBanner = false, onChristmasBannerClose, }) {
+export default function HeroContainer({ NavbarComponent, ChristmasBannerComponent, title1, title2, title3, searchQuery = '', containerClassName = '', headingContainerClassName = '', title1ClassName = '', title2ClassName = '', showChristmasBanner = false, onChristmasBannerClose, }) {
     const [isBannerVisible, setIsBannerVisible] = useState(showChristmasBanner);
     useEffect(() => {
         setIsBannerVisible(showChristmasBanner);
@@ -17,5 +17,7 @@ export default function HeroContainer({ NavbarComponent, ChristmasBannerComponen
         ChristmasBannerComponent && isBannerVisible && (React.createElement(ChristmasBannerComponent, { isVisible: isBannerVisible, onClose: handleBannerClose })),
         React.createElement("div", { className: `${styles.hubMainHeading} ${headingContainerClassName}` },
             React.createElement("span", { className: title1ClassName }, title1),
-            title2 && (React.createElement("div", { className: `${styles.hubSubHeading} ${title2ClassName}` }, title2)))));
+            React.createElement("br", null),
+            React.createElement("span", { className: title1ClassName }, title2),
+            title3 && (React.createElement("div", { className: `${styles.hubSubHeading} ${title2ClassName}` }, title3)))));
 }

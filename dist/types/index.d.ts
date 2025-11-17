@@ -85,7 +85,8 @@ export interface HeroContainerProps {
         [key: string]: any;
     }>;
     title1: string;
-    title2?: string;
+    title2: string;
+    title3?: string;
     searchQuery?: string;
     showChristmasBanner?: boolean;
     onChristmasBannerClose?: () => void;
