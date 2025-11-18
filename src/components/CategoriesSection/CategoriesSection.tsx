@@ -18,7 +18,7 @@ export default function CategoriesSection({
                         className={`${styles.categoryBtn} ${selectedCategory === category ? styles.active : ''}`}
                         onClick={() => onCategoryChange(category)}
                     >
-                        <h1 className='category_name' >{category}</h1>
+                        <h1 className={styles.category_name} >{category}</h1>
                     </button>
                 ))}
             </div>
