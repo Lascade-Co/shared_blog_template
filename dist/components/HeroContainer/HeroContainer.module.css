@@ -1,7 +1,7 @@
 .hubHeroContainer {
     width: 98.5%;
     margin-top: 12px;
-    height: 24rem;
+    height: 30rem;
     background: linear-gradient(#0099FF, #FFFFFF);
     border-top-left-radius: 42px;
     border-top-right-radius: 42px;
@@ -13,7 +13,7 @@
 }
 
 .hubHeroContainer.christmasBannerVisible {
-    height: 30rem;
+    height: 35rem;
     gap: 2rem;
 }
 
