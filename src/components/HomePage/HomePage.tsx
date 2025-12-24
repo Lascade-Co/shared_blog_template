@@ -27,6 +27,7 @@ export default function HomePage({
     postsPerPage = 51,
     categoryNames = DEFAULT_CATEGORY_NAMES,
     ExtraComponent,
+    onBlogClick,
 }: HomePageProps) {
     const [selectedCategory, setSelectedCategory] = useState('Latest');
     const [page, setPage] = useState(currentPage);
@@ -113,6 +114,7 @@ export default function HomePage({
                     onPageChange={handlePageChange}
                     isSearchActive={!!searchQuery}
                     searchQuery={searchQuery}
+                    onBlogClick={onBlogClick}
                 />
 
                 {ExtraComponent && <ExtraComponent />}

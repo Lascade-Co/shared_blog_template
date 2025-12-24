@@ -6,15 +6,21 @@ import { formatDate, stripHtml } from '../../utils/blogUtils';
 import styles from './BlogsGrid.module.css';
 
 // Default Link component for non-Next.js projects
-const DefaultLink: React.FC<{ href: string; className?: string; children: React.ReactNode }> = ({
+const DefaultLink: React.FC<{
+    href: string;
+    className?: string;
+    children: React.ReactNode;
+    onClick?: (e: React.MouseEvent) => void;
+}> = ({
     href,
     className,
-    children
+    children,
+    onClick
 }) => (
-    <a href={href} className={className}>
-        {children}
-    </a>
-);
+        <a href={href} className={className} onClick={onClick}>
+            {children}
+        </a>
+    );
 
 export default function BlogsGrid({
     posts,
@@ -22,6 +28,7 @@ export default function BlogsGrid({
     currentPage,
     totalPages,
     onPageChange,
+    onBlogClick,
     isSearchActive,
     searchQuery,
     LinkComponent = DefaultLink,
@@ -83,7 +90,12 @@ export default function BlogsGrid({
 
             <div className={styles.blogsGrid}>
                 {posts.map((post) => (
-                    <LinkComponent href={`/hub/${post.slug}`} key={post.id} className={styles.blogCard}>
+                    <LinkComponent
+                        href={`/hub/${post.slug}`}
+                        key={post.id}
+                        className={styles.blogCard}
+                        onClick={() => onBlogClick?.(post)}
+                    >
                         <>
                             {post.featuredImage && (
                                 <div className={styles.blogImage}>

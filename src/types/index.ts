@@ -46,6 +46,8 @@ export interface HomePageProps {
     postsPerPage?: number;
     categoryNames?: string[];
 
+    onBlogClick?: (post: any) => void;
+
     // Optional extra component
     ExtraComponent?: React.ComponentType;
 }
@@ -86,9 +88,15 @@ export interface BlogsGridProps {
     currentPage: number;
     totalPages: number;
     onPageChange: (page: number) => void;
+    onBlogClick?: (post: any) => void;
     isSearchActive: boolean;
     searchQuery: string;
-    LinkComponent?: React.ComponentType<{ href: string; className?: string; children: React.ReactNode }>;
+    LinkComponent?: React.FC<{
+        href: string;
+        className?: string;
+        children: React.ReactNode;
+        onClick?: (e: React.MouseEvent) => void;
+    }>;
 }
 
 export interface CategoriesSectionProps {
