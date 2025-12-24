@@ -43,7 +43,7 @@ export interface BlogPostPageProps {
         onSearch?: (query: string) => void;
     }>;
     FooterComponent: React.ComponentType;
-    CustomModelBannerComponent: React.ComponentType;
+    CustomModelBannerComponent?: React.ComponentType;
     post: BlogPost;
     searchQuery?: string;
     onSearch?: (query: string) => void;

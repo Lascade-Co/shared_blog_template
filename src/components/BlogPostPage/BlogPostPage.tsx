@@ -21,7 +21,7 @@ export default function BlogPostPage({
         <div className={styles.post}>
             <NavbarComponent searchQuery={searchQuery} onSearch={onSearch} />
 
-            <CustomModelBannerComponent />
+            {CustomModelBannerComponent  && <CustomModelBannerComponent />}
 
             <div className={styles.postPage}>
                 <BlogPostContent
