@@ -63,9 +63,9 @@ export default function HeroContainer({
                     <span className={title1ClassName}>{title2}</span>
                 </div>
                 {title3 && (
-                    <div className={`${styles.hubSubHeading} ${title2ClassName}`}>
+                    <h1 className={`${styles.hubSubHeading} ${title2ClassName}`}>
                         {title3}
-                    </div>
+                    </h1>
                 )}
             </div>
         </div>

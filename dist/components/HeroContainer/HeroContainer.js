@@ -20,5 +20,5 @@ export default function HeroContainer({ NavbarComponent, ChristmasBannerComponen
                 React.createElement("span", { className: title1ClassName }, title1),
                 React.createElement("br", null),
                 React.createElement("span", { className: title1ClassName }, title2)),
-            title3 && (React.createElement("div", { className: `${styles.hubSubHeading} ${title2ClassName}` }, title3)))));
+            title3 && (React.createElement("h1", { className: `${styles.hubSubHeading} ${title2ClassName}` }, title3)))));
 }
