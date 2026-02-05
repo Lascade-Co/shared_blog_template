@@ -38,7 +38,7 @@ export default function BlogPostContent({
         <div className={styles.blog}>
             <div className={styles.blogPostPage}>
                 <div className={styles.blogPostHeader}>
-                    <h1 className={styles.blogPostTitle}>{post.title}</h1>
+                    <h2 className={styles.blogPostTitle}>{post.title}</h2>
 
                     <div className={styles.blogPostMeta}>
                         <time dateTime={post.date}>{formatDate(post.date)}</time>

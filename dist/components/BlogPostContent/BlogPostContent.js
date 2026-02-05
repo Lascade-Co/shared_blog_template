@@ -8,7 +8,7 @@ export default function BlogPostContent({ post, LinkComponent = DefaultLink, pop
     return (React.createElement("div", { className: styles.blog },
         React.createElement("div", { className: styles.blogPostPage },
             React.createElement("div", { className: styles.blogPostHeader },
-                React.createElement("h1", { className: styles.blogPostTitle }, post.title),
+                React.createElement("h2", { className: styles.blogPostTitle }, post.title),
                 React.createElement("div", { className: styles.blogPostMeta },
                     React.createElement("time", { dateTime: post.date }, formatDate(post.date)),
                     post.author && (React.createElement(React.Fragment, null,
